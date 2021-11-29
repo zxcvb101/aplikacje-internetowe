@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let szer = prompt('podaj szerokosc:');
+            let wys = prompt('podaj wysokosc:');
+
+            for(let j = 0; j < szer; j++)
+                {
+                    document.write('*');
+                }
+                document.write('<br>');
+
+            for(let i = 0; i < wys - 2; i++)
+            {
+
+                document.write('*');
+                for(let k = 0; k < szer - 2; k++)
+                {
+                    document.write('&nbsp;')
+                    document.write('&nbsp;')
+                }
+                document.write('*');
+                document.write('<br>');
+            }
+
+            for(let j = 0; j < szer; j++)
+                {
+                    document.write('*');
+                }
+                document.write('<br>');
+        </script>
+    </body>
+</html>
