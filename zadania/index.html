@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="zegarek"></div>
+        <script>
+            const divZ = document.querySelector('.zegarek');
+
+            const zegarek = function()
+            {
+                const czas = new Date();
+
+                let godzina = czas.getHours();
+                let minuta = czas.getMinutes();
+                let sekunda = czas.getSeconds();
+
+                if(godzina < 10) godzina = '0' + godzina;
+                if(minuta < 10) minuta = '0' + minuta;
+                if(sekunda < 10) sekunda = '0' + sekunda;
+
+                divZ.textContent = `${godzina}:${minuta}:${sekunda}`;
+                setTimeout(zegarek, 1000);
+            } 
+
+            //setInterval(zegarek, 1000);
+            zegarek();
+
+        </script>
+    <body>
+</html>
